@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Time Zone Converter</title>
+    <meta name="description" content="Convert meeting times across global timezones with shareable links and calendar export">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="app-container">
+        <!-- Converter Form -->
+        <div id="converterForm" class="form-wrapper">
+            <div class="card card-main">
+                <div class="header">
+                    <div class="icon-wrapper">
+                        <svg class="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h1 class="title">Meeting Time Zone Converter</h1>
+                    <p class="subtitle">Convert meeting times across global timezones</p>
+                </div>
+
+                <form id="timeForm" class="form">
+                    <div class="form-group">
+                        <label for="dateInput" class="label">Date</label>
+                        <input type="date" id="dateInput" required class="input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeInput" class="label">Time</label>
+                        <input type="time" id="timeInput" required class="input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timezoneInput" class="label">Source Timezone</label>
+                        <select id="timezoneInput" required class="input select">
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Convert Times
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Results Display -->
+        <div id="resultsDisplay" class="results-wrapper hidden">
+            <div class="card card-results">
+                <div class="results-header">
+                    <h2 class="results-title">Converted Times</h2>
+                    
+                    <div class="format-selector">
+                        <label for="dateFormatSelect" class="format-label">Date Format</label>
+                        <select id="dateFormatSelect" class="format-select">
+                        </select>
+                    </div>
+                </div>
+
+                <div id="timesList" class="times-list"></div>
+
+                <div class="actions">
+                    <button id="copyAllBtn" class="btn btn-secondary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        Copy All
+                    </button>
+                    <button id="exportCalendarBtn" class="btn btn-secondary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Export Calendar
+                    </button>
+                    <button id="newConversionBtn" class="btn btn-tertiary">
+                        New Conversion
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span id="toastMessage">Copied to clipboard</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

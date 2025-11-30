@@ -1,0 +1,22 @@
+{
+  "name": "meeting-timezone-converter",
+  "version": "1.0.0",
+  "description": "A clean, single-purpose web app that converts meeting times across timezones",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "deploy": "vercel"
+  },
+  "keywords": [
+    "timezone",
+    "converter",
+    "meeting",
+    "time",
+    "scheduler"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
