@@ -1,0 +1,89 @@
+# Meeting Action Items Extractor Configuration
+
+# Output settings
+output:
+  default_format: markdown  # Options: markdown, json, both
+  include_stats: true       # Include statistics in output
+  include_context: false    # Include surrounding context for action items
+  auto_open: false          # Automatically open generated files
+
+# Detection settings
+detection:
+  # Action keywords (in addition to defaults)
+  custom_action_keywords:
+    - "deliverable"
+    - "milestone"
+    - "commitment"
+  
+  # Priority rules
+  priority:
+    high_keywords:
+      - "urgent"
+      - "ASAP"
+      - "critical"
+      - "blocker"
+      - "emergency"
+    
+    low_keywords:
+      - "nice to have"
+      - "optional"
+      - "if time permits"
+      - "low priority"
+  
+  # Deadline patterns (custom)
+  deadline_keywords:
+    - "by"
+    - "due"
+    - "deadline"
+    - "before"
+    - "until"
+
+# Parser settings
+parser:
+  # Skip lines matching these patterns
+  skip_patterns:
+    - "^Recording started"
+    - "^Recording ended"
+    - "^Meeting ID:"
+    - "^Passcode:"
+  
+  # Minimum message length to consider
+  min_message_length: 2
+  
+  # Clean speaker names
+  clean_speaker_names: true
+
+# Formatting preferences
+formatting:
+  # Markdown options
+  markdown:
+    use_emojis: true
+    checkbox_format: "- [ ]"  # Task list format
+    priority_emojis:
+      high: "🔴"
+      medium: "🟡"
+      low: "🟢"
+  
+  # Date format for output
+  date_format: "%B %d, %Y"  # e.g., "December 07, 2025"
+  
+  # Time format
+  time_format: "%H:%M"  # 24-hour format
+
+# Batch processing
+batch:
+  default_pattern: "*.txt"
+  recursive: false
+  output_subdir: "summaries"
+  skip_on_error: true  # Continue processing other files if one fails
+
+# Advanced settings
+advanced:
+  # Enable debug logging
+  debug: false
+  
+  # Maximum context window for action items
+  context_window: 1
+  
+  # Confidence threshold for action detection (0.0-1.0)
+  confidence_threshold: 0.5

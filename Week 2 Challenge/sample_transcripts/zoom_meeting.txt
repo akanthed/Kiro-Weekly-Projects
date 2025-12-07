@@ -1,0 +1,32 @@
+Recording started
+Meeting ID: 123-456-789
+
+00:00:15 Sarah Chen: Good morning everyone! Thanks for joining our Sprint Planning meeting.
+00:00:22 Mike Johnson: Morning! Ready to dive in.
+00:00:28 Sarah Chen: Great. Let's start with the API integration project. Mike, can you give us a quick update?
+00:00:35 Mike Johnson: Sure. The authentication module is complete, but we need to update the documentation by Friday. I'll handle that.
+00:00:48 Sarah Chen: Perfect. That's urgent since the client demo is next Monday.
+00:00:55 Emily Rodriguez: I can help with the documentation if needed. I'm also working on the frontend components.
+00:01:10 Mike Johnson: That would be great, Emily. Could you review the API endpoints and add examples to the docs?
+00:01:18 Emily Rodriguez: Absolutely. I will review the endpoints by end of week and add code examples.
+00:01:30 David Park: Quick question - are we still planning to migrate the database this sprint?
+00:01:38 Sarah Chen: Yes, that's critical. David, you need to prepare the migration scripts by Wednesday. This is a blocker for the team.
+00:01:50 David Park: Got it. I'll have the scripts ready by Wednesday EOD. Should I also create a rollback plan?
+00:02:00 Sarah Chen: Yes, please. The rollback plan is a must-have for production deployments.
+00:02:10 Emily Rodriguez: I have a task from last sprint - the user dashboard redesign. I should finish that by tomorrow.
+00:02:22 Mike Johnson: Emily, don't forget we also need to fix the mobile responsive issues. That's been reported by multiple users.
+00:02:35 Emily Rodriguez: Right. I'll work on the mobile fixes this week. Let me add that to my list.
+00:02:45 Sarah Chen: Good. Mike, can you follow up with the QA team about the test coverage? We need that report ASAP.
+00:02:58 Mike Johnson: Sure, I'll reach out to them today and get the report by end of day.
+00:03:10 David Park: One more thing - we should schedule a code review session for the new features. Maybe next Tuesday?
+00:03:20 Sarah Chen: Good idea. David, please send out calendar invites for the code review session by end of today.
+00:03:32 Emily Rodriguez: Sounds good. I'll prepare my code for review.
+00:03:40 Sarah Chen: Excellent. Let's also plan a retrospective meeting. Mike, could you organize that for next Friday?
+00:03:52 Mike Johnson: Will do. I'll send out the retro invite and prepare the agenda by tomorrow.
+00:04:05 Sarah Chen: Perfect. Any other blockers or concerns?
+00:04:12 David Park: None from my side.
+00:04:15 Emily Rodriguez: All good here.
+00:04:18 Mike Johnson: Same here, looking forward to a productive sprint.
+00:04:25 Sarah Chen: Great! Thanks everyone. Let's make this sprint count.
+
+Recording ended
